@@ -1,5 +1,6 @@
 {
   "name": "@denixjg/publisher-gitea",
+  "description": "Publish your Electron Forge apps to Gitea with ease",
   "version": "1.0.0",
   "main": "dist/PublisherGitea.js",
   "types": "dist/PublisherGitea.d.ts",
@@ -12,12 +13,11 @@
     "publisher",
     "gitea"
   ],
-  "author": "DenixJG",
+  "author": "DenixJG <rafael.popescu140@gmail.com>",
   "license": "MIT",
   "files": [
     "dist/**/*"
   ],
-  "description": "Publish your Electron Forge apps to Gitea with ease",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/mime-types": "^2.1.4",
