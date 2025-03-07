@@ -135,7 +135,7 @@ export default class PublisherGitea extends PublisherBase<PublisherGiteaConfig> 
                 config.repository.name,
                 release.id,
                 artifactPath,
-                artifactName
+                sanitizedArtifactName
               );
 
               if (uploadedAsset.name !== sanitizedArtifactName) {
