@@ -1,0 +1,37 @@
+{
+  "name": "@denixjg/publisher-gitea",
+  "version": "1.0.0",
+  "main": "dist/PublisherGitea.js",
+  "types": "dist/PublisherGitea.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "electron-forge",
+    "publisher",
+    "gitea"
+  ],
+  "author": "DenixJG",
+  "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
+  "description": "Publish your Electron Forge apps to Gitea with ease",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^22.13.9",
+    "@types/node-fetch": "^2.6.12",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@electron-forge/publisher-base": "^7.7.0",
+    "@electron-forge/shared-types": "^7.7.0",
+    "chalk": "^5.4.1",
+    "form-data": "^4.0.2",
+    "fs-extra": "^11.3.0",
+    "mime-types": "^2.1.35",
+    "node-fetch": "^3.3.2"
+  }
+}
