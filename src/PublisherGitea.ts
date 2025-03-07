@@ -118,16 +118,18 @@ export default class PublisherGitea extends PublisherBase<PublisherGiteaConfig> 
               (a) => a.name === sanitizedArtifactName
             );
 
-            if (asset && config.force === true) {
-              // Delete the existing asset
-              await gitea.deleteReleaseAsset(
-                config.repository.owner,
-                config.repository.name,
-                release.id,
-                asset.id
-              );
-            } else {
-              return done();
+            if (asset !== undefined) {
+              if (config.force === true) {
+                // Delete the existing asset
+                await gitea.deleteReleaseAsset(
+                  config.repository.owner,
+                  config.repository.name,
+                  release.id,
+                  asset.id
+                );
+              } else {
+                return done();
+              }
             }
 
             try {
