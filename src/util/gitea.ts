@@ -78,9 +78,10 @@ export class Gitea {
   async deleteReleaseAsset(
     owner: string,
     repo: string,
+    releaseId: number,
     assetId: number
   ): Promise<void> {
-    const url = `${this.baseUrl}/api/v1/repos/${owner}/${repo}/releases/assets/${assetId}`;
+    const url = `${this.baseUrl}/api/v1/repos/${owner}/${repo}/releases/${releaseId}/assets/${assetId}`;
     const response = await fetch(url, {
       method: "DELETE",
       headers: {

@@ -123,10 +123,11 @@ export default class PublisherGitea extends PublisherBase<PublisherGiteaConfig> 
               await gitea.deleteReleaseAsset(
                 config.repository.owner,
                 config.repository.name,
+                release.id,
                 asset.id
               );
             } else {
-              done();
+              return done();
             }
 
             try {
